@@ -275,9 +275,8 @@ func (s *Shell) RunScript(path string, extra *env.Environment) error {
 		command = "powershell.exe"
 		args = []string{"-file", path}
 
-
 	case !isWindows && isBash:
-		command = "/bin/bash"
+		command = "/bin/sh"
 		args = []string{"-c", path}
 
 	default:

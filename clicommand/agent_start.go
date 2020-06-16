@@ -120,7 +120,7 @@ func DefaultShell() string {
 	case "freebsd", "openbsd", "netbsd":
 		return `/usr/local/bin/bash -e -c`
 	default:
-		return `/bin/bash -e -c`
+		return `/bin/sh -e -c`
 	}
 }
 
